@@ -101,7 +101,8 @@ public enum SuperProperties {
   nonisolated(unsafe) private static
     var _client_heartbeat_session_id_last_generated: Date = Date
       .distantPast
-  nonisolated(unsafe) private static var _client_heartbeat_session_id_cached: UUID? = nil
+  nonisolated(unsafe) private static var _client_heartbeat_session_id_cached:
+    UUID? = nil
   static var _client_heartbeat_session_id: UUID {
     let now = Date.now
     if now.timeIntervalSince(_client_heartbeat_session_id_last_generated)
@@ -347,10 +348,8 @@ public enum SuperProperties {
     #if os(macOS)
       return _launch_signature.uuidString.lowercased()
     #elseif os(iOS) || os(watchOS)
-      // TODO: ios follows a different format, using an integer. not sure how this is generated yet.
-      // for now, i was told its safe to use macos one instead.
-      //    return nil
-      return _launch_signature.uuidString.lowercased()
+      // discord's iOS client stubbed this with the current date in nanoseconds.
+      return String(Int64(Date.now.timeIntervalSince1970 * 1_000_000_000))
     #else
       return nil
     #endif
