@@ -25,11 +25,11 @@ We have subprojects in the works to port the client to other platforms natively 
 
 ## Installing
 
-There nightly releases of Paicord built from source when source successfully compiles.
+These downloads are nightly releases of Paicord, built from source.
 
-| iOS (17.0+)                                                  | macOS (14.0+)                                                |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [Download iOS Artifact](https://nightly.link/llsc12/Paicord/workflows/build/main/Paicord-iOS) | [Download macOS Artifact](https://nightly.link/llsc12/Paicord/workflows/build/main/Paicord-macOS) |
+| iOS (17.0+)                                                  | macOS (14.0+)                                                | Linux |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [Download iOS Artifact](https://nightly.link/llsc12/Paicord/workflows/build/main/Paicord-iOS) | [Download macOS Artifact](https://nightly.link/llsc12/Paicord/workflows/build/main/Paicord-macOS) | TBA |
 
 
 ## Sponsoring
