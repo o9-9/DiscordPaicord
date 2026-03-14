@@ -141,6 +141,7 @@ public enum SuperProperties {
 
   public enum ContextPropertyContext {
     case createMessage
+    case createDM
   }
   public static func GenerateContextPropertiesHeader(
     context: ContextPropertyContext
@@ -148,6 +149,7 @@ public enum SuperProperties {
     let dict: [String: Any] =
       switch context {
       case .createMessage: ["location": "chat_input"]
+      case .createDM: [:]
       }
     let data = try! JSONSerialization.data(withJSONObject: dict, options: [])
     return data.base64EncodedString()
